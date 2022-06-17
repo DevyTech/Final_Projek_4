@@ -45,7 +45,7 @@
                 console.log(data);
                 document.getElementById('city').innerHTML = 'City : '+data.name;
                 document.getElementById('conditions').innerHTML = 'Conditions : '+data.weather[0].description;
-                document.getElementById('temp').innerHTML = 'Temperature : '+data.main.temp+'°C';
+                document.getElementById('temp').innerHTML = 'Temperature : '+Math.trunc(data.main.temp -273.15)+'°C';
                 document.getElementById('wind').innerHTML = 'Wind Speed : '+data.wind.speed+' m/s';
                 city.value = '';
             })
